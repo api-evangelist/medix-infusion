@@ -1,0 +1,26 @@
+generated: '2026-08-25'
+method: searched
+source: https://medixinfusion.com/
+plan_count: 0
+description: >-
+  Medix Infusion publishes no plans, tiers, price list or rate card of any kind,
+  and there is no API to price. The company is a healthcare provider that bills
+  through a patient's major medical or pharmacy benefit — the "For Providers" and
+  "Patients" pages describe benefits investigation, prior authorization and
+  insurance coordination, not a purchasable product. There is no /pricing page and
+  no "contact sales" pricing form; the equivalent commercial entry point is a
+  clinical referral via the downloadable order forms.
+plans: []
+searched:
+  - url: https://medixinfusion.com/
+    status: 200
+    note: No pricing or plans link in the primary navigation or footer.
+  - url: https://medixinfusion.com/providers/
+    status: 200
+    note: Referral and benefits process; no rates published.
+  - url: https://medixinfusion.com/order-forms/
+    status: 200
+    note: Downloadable therapy order forms — the commercial entry point, unpriced.
+  - url: https://medixinfusion.com/llms.txt
+    status: 200
+    note: Site's own page index lists no pricing page.

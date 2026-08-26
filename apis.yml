@@ -1,17 +1,32 @@
 aid: medix-infusion
 name: Medix Infusion
-description: 'Medix Infusion is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Medix Infusion, Inc. is a technology-enabled infusion care provider headquartered
+  in Addison, Texas, that administers infusion and injectable therapies — anti-infectives,
+  biologics, IVIG and other specialty medications — to chronically and acutely ill patients
+  through a network of ambulatory infusion suites and in the home. The company concentrates
+  on rural, suburban and other under-served markets, coordinating benefits investigation,
+  prior authorization, scheduling, pharmacy and nursing around each referral, and is
+  accredited by the Accreditation Commission for Health Care (ACHC). It raised a $35M
+  Series B led by Echo Health Ventures in January 2023 alongside existing investor
+  Noro-Moseley Partners. Medix Infusion operates as a care-delivery organization: it
+  publishes no developer portal, no API documentation and no machine-readable API
+  contract on any public host as of this profile.'
+image: https://medixinfusion.com/wp-content/uploads/2023/01/medix-infusion-logo-horizontal.svg
 url: https://raw.githubusercontent.com/api-evangelist/medix-infusion/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-25'
 modified: '2026-08-25'
 tags:
 - Company
+- Healthcare
+- Infusion Therapy
+- Specialty Pharmacy
+- Home Health
+- Ambulatory Care
+- Patient Care
+- Texas
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,47 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/medix-infusion-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://medixinfusion.com/
+- type: Support
+  url: https://medixinfusion.com/contact/
+- type: TermsOfService
+  url: https://medixinfusion.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://medixinfusion.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/medix-infusion
+- type: LLMsTxt
+  url: llms/medix-infusion-llms.txt
+- type: Conformance
+  url: conformance/medix-infusion-conformance.yml
+x-enrichment:
+  date: '2026-08-25'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Medix Infusion runs ambulatory infusion suites and in-home infusion nursing —
+    the product is clinical care billed through a patient's medical or pharmacy
+    benefit — and its entire public surface is one WordPress marketing site with no
+    /developers, /docs or /api path; the only machine-readable thing on the domain
+    is the default WordPress wp-json REST index that ships with the CMS.
+  evidence:
+    - url: https://medixinfusion.com/developers
+      status: 404
+    - url: https://medixinfusion.com/openapi.json
+      status: 404
+    - url: https://medixinfusion.com/graphql
+      status: 404
+    - url: https://medixinfusion.com/.well-known/agent-card.json
+      status: 404
+    - url: https://medixinfusion.com/llms.txt
+      status: 200
+    - url: https://medixinfusion.com/wp-json
+      status: 200
+  checked: '2026-08-25'

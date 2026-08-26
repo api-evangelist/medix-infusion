@@ -1,0 +1,45 @@
+generated: '2026-08-25'
+method: probed
+source: https://medixinfusion.com/.well-known/
+description: >-
+  Results of probing the /.well-known/ discovery surface for every host Medix
+  Infusion operates. The company publishes no API and has no API host, so the
+  only hosts available to probe are the corporate WordPress site
+  (medixinfusion.com) and its www alias. Every /.well-known/ path returned 404.
+  Note the shape of the miss: /.well-known/security.txt returns a bare nginx 404
+  (548 bytes) while the other paths are swallowed by the WordPress 404 template
+  (~112KB of HTML) — neither is a document. No WellKnown or SecurityTxt pointer
+  is wired in apis.yml, because nothing here was served.
+hosts:
+  - host: https://medixinfusion.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://www.medixinfusion.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
