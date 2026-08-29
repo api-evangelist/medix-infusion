@@ -11,6 +11,17 @@ description: 'Medix Infusion, Inc. is a technology-enabled infusion care provide
   Noro-Moseley Partners. Medix Infusion operates as a care-delivery organization: it
   publishes no developer portal, no API documentation and no machine-readable API
   contract on any public host as of this profile.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://medixinfusion.com/wp-content/uploads/2023/01/medix-infusion-logo-horizontal.svg
 url: https://raw.githubusercontent.com/api-evangelist/medix-infusion/refs/heads/main/apis.yml
 x-type: company
